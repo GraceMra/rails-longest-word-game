@@ -4,9 +4,10 @@
   <strong><%= letter %></strong>
 <% end %>
 <br><br>
-<h6><strong>What is the longest word you can find?</strong></h6>
+<h5><strong>What is the longest word you can find?</strong></h5>
 <form class="form-inline" action="/score" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
   <input class="form-control" type="text" name="name" placeholder="Your longest word">
   <input class="btn btn-primary mb-2" type="submit">
 </form>
